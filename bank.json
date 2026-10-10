@@ -1,0 +1,55 @@
+{
+    "bank": {
+        "name": "ПАО «Пример-Банк»",
+        "clients": [
+            {
+                "client_id": "C001",
+                "full_name": "Иванов Иван Иванович",
+                "passport": "4509 123456",
+                "phone": "+7-900-111-22-33"
+            }
+        ],
+        "accounts": [
+            {
+                "type": "DEBIT",
+                "number": "40817810000000000001",
+                "owner_id": "C001",
+                "currency": "RUB",
+                "balance": "15000",
+                "status": "ACTIVE"
+            },
+            {
+                "type": "CREDIT",
+                "number": "40817810000000000003",
+                "owner_id": "C002",
+                "currency": "RUB",
+                "balance": "0",
+                "status": "ACTIVE",
+                "credit_limit": "50000"
+            },
+            {
+                "type": "DEPOSIT",
+                "number": "42307810000000000004",
+                "owner_id": "C001",
+                "currency": "RUB",
+                "balance": "100000",
+                "status": "ACTIVE",
+                "interest_rate": "7.5",
+                "term_months": 12,
+                "opened_at": "2025-01-15"
+            }
+        ],
+        "transactions": [
+            {
+                "tx_id": "TX000001",
+                "type": "DEPOSIT",
+                "amount": "5000",
+                "currency": "RUB",
+                "source": null,
+                "target": "40817810000000000001",
+                "timestamp": "2025-01-01T12:00:00",
+                "status": "SUCCESS"
+            }
+        ]
+    }
+}

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<bank name="ПАО «Пример-Банк»">
+    <clients>
+        <client id="C001">
+            <full_name>Иванов Иван Иванович</full_name>
+            <passport>4509 123456</passport>
+            <phone>+7-900-111-22-33</phone>
+        </client>
+        <client id="C002">
+            <full_name>Петрова Анна Сергеевна</full_name>
+            <passport>4510 654321</passport>
+            <phone>+7-900-444-55-66</phone>
+        </client>
+    </clients>
+    <accounts>
+        <account number="40817810000000000001" type="DEBIT"
+                 currency="RUB" status="ACTIVE" owner_id="C001">
+            <balance>15000</balance>
+        </account>
+        <account number="40817810000000000003" type="CREDIT"
+                 currency="RUB" status="ACTIVE" owner_id="C002">
+            <balance>0</balance>
+            <credit_limit>50000</credit_limit>
+        </account>
+        <account number="42307810000000000004" type="DEPOSIT"
+                 currency="RUB" status="ACTIVE" owner_id="C001">
+            <balance>100000</balance>
+            <interest_rate>7.5</interest_rate>
+            <term_months>12</term_months>
+            <opened_at>2025-01-15</opened_at>
+        </account>
+    </accounts>
+    <transactions>
+        <transaction id="TX000001" type="DEPOSIT" currency="RUB" status="SUCCESS">
+            <amount>5000</amount>
+            <timestamp>2025-01-01T12:00:00</timestamp>
+            <target>40817810000000000001</target>
+        </transaction>
+    </transactions>
+</bank>
